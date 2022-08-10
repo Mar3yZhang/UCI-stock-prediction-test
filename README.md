@@ -33,7 +33,7 @@ Notice:
 
 # Task 1: The choose of data set 
 
-Our group has downloaded 4 stock records from the [Yahoo Finance](https://www.yahoo.com/author/yahoo-finance). ![records](images\records.png)
+Our group has downloaded 4 stock records from the [Yahoo Finance](https://www.yahoo.com/author/yahoo-finance). ![records](README.assets/records.png)
 
 And we choose to use the stock records of Apple corporation and Microsoft corporation because their amount of data is big enough.
 

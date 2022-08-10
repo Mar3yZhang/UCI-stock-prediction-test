@@ -90,6 +90,37 @@ $$
 
 ![2](README.assets/2-166012657513311.png)
 
+## 3. Calculate the Rate of Return by Adj Close
+[Rate of Return (RoR)](https://www.investopedia.com/terms/r/rateofreturn.asp):
+
++ The rate of return is the net gain or loss of an investment over a specified time period, expressed as a percentage of the investment’s initial cost.
+
++ The dividends and effects of inflation are not taken into consideration in the simple rate of return calculation.
+
+The formula to calculate the rate of return (RoR) is:
+$$
+Rate\ of \ return \ = \ \frac{Initial \ value}{Current \ value−Initial \ value} \times{100} \\\\
+$$
+
+We can see that Apple stock dropped almost 20% in 2008, ` and Microsoft's return ratio is more stable than Apple. ` 
+
+![1](README.assets/Apple-RoR.png)
+
+![2](README.assets/MS-RoR.png)
+
+## 4. Check the correlation between stocks
+The scatter matrix shows that the stock prices of Apple and Microsoft are approximately positively correlated. This is beacuse they are both in technology industry and keep growing.
+![1](README.assets/correlation.png)
+
+## 5. Check the Expected Returns and Risk
+   We take the mean of returns as their expected returns and the standard deviation of returns as their risk.
+
+   We can see that Apple has more expected return and lower risk than Microsoft.
+
+![1](README.assets/return_risk.png)
+
+
+
 ## The profit
 
 ​	Here we assume that the profit only depends on the difference between open price and close price. 

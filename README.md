@@ -51,9 +51,44 @@ And we choose to use the stock records of Apple corporation and Microsoft corpor
 
 3.  Apply `PCA` analysis or `standarization` if necessary.
 
-   Analysis: **No value is missing in these 2 data sets**
+   Analysis: Unnecessary to do these operation at present.
+   
+4. Use the date of the stock record to replace the index. 
 
 # Task 3: Analysis
+
+## 1. Check the trend by close price
+
+​	Here we draw the plots according to the daily stock close price of Apple and Microsoft between 2005-1-1 and 2025-8-1 excluding 2020.
+
+​	We can see that `the close price of these 2 company is increasing in general. ` 
+
+​	The price decrease at the end of 2021 but begin to ascend recently.
+
+![1](README.assets/1-16601255150365.png)
+
+![2](README.assets/2-16601255282457.png)
+
+​	
+
+## 2. Check the trend by MA of adjusted price
+
+[Moving Average (MA)](https://www.investopedia.com/terms/m/movingaverage.asp):  
+
++ a moving average is a calculation used to analyze data points by creating a series of averages of different subsets of the full data set
+
++ By calculating the moving average, the impacts of random, short-term fluctuations on the price of a stock over a specified time frame are `mitigated`.
+
+Here we use the SMA:
+$$
+SMA \ = \ \frac{A_1 +A_2+A_3+...+A_n}{n} \\\\
+\ A=Average \ in \ period 
+\\
+n=Number \ of \ time \  periods
+$$
+![1](README.assets/1-16601265589119.png)
+
+![2](README.assets/2-166012657513311.png)
 
 ## The profit
 

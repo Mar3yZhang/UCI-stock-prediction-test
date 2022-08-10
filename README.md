@@ -1,7 +1,7 @@
-# # :book:Report for the final-project ：Thinking about Purchasing Stock  Case Study
+# # :book:Report for the final-project ：
 
 > + Course info ：I&C SCI_X426.85 (SUMMER 2022/REG 00267/SEC 1)
->
+> + Project theme : Thinking about Purchasing Stock  Case Study
 > + Group info :
 >   + Group 2 : Qi Zhang && Xinmeng Liu
 

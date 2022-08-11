@@ -86,9 +86,20 @@ SMA \ = \ \frac{A_1 +A_2+A_3+...+A_n}{n} \\\\
 \\
 n=Number \ of \ time \  periods
 $$
+
+According to the plots,we can see that :
+
+1. The adj price of Apple and Microsoft `keep increasing in general` in this time period. 
+
+2. `However, the price ascending of Microsoft seems smoother and the price of it is more stable than Apple`. 
+
++ > I guess it's because the profit of Apple mainly depends on the release of its new product. So the price of its stock can be up and down or you can say seasonal.
+  >
+  >  But Microsoft's profit mainly comes from the bonus of softwares. Although the software keeps updating, it can not suddenly attract a large amount of people to buy its product or abandon its product. That's why its stock seems more stable. 
+
 ![1](README.assets/1-16601265589119.png)
 
-![2](README.assets/2-166012657513311.png)
+![](README.assets/2-166012657513311.png)
 
 ## 3. Calculate the Rate of Return by Adj Close
 [Rate of Return (RoR)](https://www.investopedia.com/terms/r/rateofreturn.asp):
@@ -99,7 +110,7 @@ $$
 
 The formula to calculate the rate of return (RoR) is:
 $$
-Rate\ of \ return \ = \ \frac{Initial \ value}{Current \ value−Initial \ value} \times{100} \\\\
+Rate\ of \ return \ = \ \frac{Current \ value−Initial \ value} {Initial \ value}\times{100} \\\\
 $$
 
 We can see that Apple stock dropped almost 20% in 2008, ` and Microsoft's return ratio is more stable than Apple. ` 
@@ -109,7 +120,9 @@ We can see that Apple stock dropped almost 20% in 2008, ` and Microsoft's return
 ![2](README.assets/MS-RoR.png)
 
 ## 4. Check the correlation between stocks
-The scatter matrix shows that the stock prices of Apple and Microsoft are approximately positively correlated. This is beacuse they are both in technology industry and keep growing.
+​	The scatter matrix shows that the stock prices of Apple and Microsoft are approximately positively correlated. 
+
+​	This is because they are both in technology industry and keep growing.
 ![1](README.assets/correlation.png)
 
 ## 5. Check the Expected Returns and Risk
@@ -121,13 +134,45 @@ The scatter matrix shows that the stock prices of Apple and Microsoft are approx
 
 
 
-## The profit
+## Predict the trend of adjusted price
 
-​	Here we assume that the profit only depends on the difference between open price and close price. 
+​	`Adjusted price` is useful in analyzing the price of history stock and the trend of it. To gain the profit from stocks, we should buy the stock when it has a low price and sell it out when the price of it is high. 
+
+​	That is to say, if the future trend of a stock is  ascending, it's time to buy in and make some money!
+
+​	So predict the trend of adjusted price helps us to decide which stock is profitable. 
+
+Steps:
+
++ `Adjust the dataset`.  Adjusted price is set to be target while others are features.
++ `Data cleasing and split the data into train data set and test data set.`
++ Use the dataset to train different kinds of models and `find the best out of them`.
++ Use the best model to predict the future trend of this 2 company `relatively`.
++ Find out the better stock.
+
+### Step 1: Feature Engineering
+
+According to the heat map, some of the features are too related to be used in predict model. 
+
+-> `As a result, we should develop 2 new features to feed the model.` 
 $$
-Profit\ Today \ = \ Open \ price \ - \ Close \ price
+HL\_PCT \ = \ \frac{High−Low} {Close}\times{100} \\\\
 $$
-If the difference today is over 0, we think the stock today is profitable. Else it's not profitable.
 
-+ And the high price, low price and adjusted price is not useful in this part of analysis.
+$$
+PCT\_change \ = \ \frac{Close−Open} {Open} \times{100}\\\\
+$$
 
+### Step 2: Data Cleansing && Train_test_split
+
+-> Set the adj price to be y and other features to be x.
+
+-> X values varies so different that standrization is necessary.
+
+-> Split the data
+
+ 
+
+### Step 3: Choose the regression model and train them
+
+ 

@@ -1,7 +1,7 @@
 # # :book:Report for the final-project ：
 
 > + Course info ：I&C SCI_X426.85 (SUMMER 2022/REG 00267/SEC 1)
-> + Project theme : Thinking about Purchasing Stock  Case Study
+> + Project theme : Thinking about Purchasing Stock Case Study
 > + Group info :
 >   + Group 2 : Qi Zhang && Xinmeng Liu
 
@@ -11,7 +11,9 @@ Notice:
 
 + This PDF is only used to explain the operation.
 
-  
++ Here we have a dictionary
+
+  [toc]
 
 ## Task 0：Comprehend the features the csv file
 
@@ -134,7 +136,7 @@ We can see that Apple stock dropped almost 20% in 2008, ` and Microsoft's return
 
 
 
-## Predict the trend of adjusted price
+## 6. Train the models to predict the trend of adjusted price
 
 ​	`Adjusted price` is useful in analyzing the price of history stock and the trend of it. To gain the profit from stocks, we should buy the stock when it has a low price and sell it out when the price of it is high. 
 
@@ -154,7 +156,9 @@ Steps:
 
 According to the heat map, some of the features are too related to be used in predict model. 
 
--> `As a result, we should develop 2 new features to feed the model.` 
+-> `As a result, we should develop some new features to feed the model.` 
+
+Some of the features are listed below.
 $$
 HL\_PCT \ = \ \frac{High−Low} {Close}\times{100} \\\\
 $$
@@ -163,16 +167,89 @@ $$
 PCT\_change \ = \ \frac{Close−Open} {Open} \times{100}\\\\
 $$
 
+$$
+High\_Low \ = \ \frac{Hight−Low} {Low} \times{100}\\\\
+$$
+
 ### Step 2: Data Cleansing && Train_test_split
 
--> Set the adj price to be y and other features to be x.
+1. drop the null values
+2. Set the adj price to be y and other features to be x.
 
--> X values varies so different that standrization is necessary.
-
--> Split the data
+3. X values varies so different that standrization is necessary.
+4. Split the data
 
  
 
 ### Step 3: Choose the regression model and train them
 
- 
+`Apple`:
+
+| Model                     | Score               |
+| ------------------------- | ------------------- |
+| SVR                       | 0.1347301809273994  |
+| RandomForestRegressor     | 0.9004766402249255  |
+| AdaBoostRegressor         | 0.7477720545636599  |
+| GradientBoostingRegressor | 0.8956349972426464  |
+| LinearRegression          | 0.46750795307588877 |
+| DecisionTreeRegressor     | 0.3297451092942806  |
+| KNeighborsRegressor       | 0.7410970518931721  |
+
+`Microsoft`:
+
+| Model                     | Score                |
+| ------------------------- | -------------------- |
+| SVR                       | -0.11970083235958495 |
+| RandomForestRegressor     | 0.6456887918544316   |
+| AdaBoostRegressor         | 0.1932097008238315   |
+| GradientBoostingRegressor | 0.6774150367473095   |
+| LinearRegression          | 0.1651828307485914   |
+| DecisionTreeRegressor     | -0.2360732479219958  |
+| KNeighborsRegressor       | 0.318847926671497    |
+
+> It seems that if we find the suitable inputs for these models to predict the trend of adj price, the stock price of `Apple` is more predictable than `Microsoft`.
+
+
+
+## 7: Try to predict the adj price by date
+
+​	Because we can't find approprate inputs to feed the models above to predict the future price, we try to modify this model.
+
+​	Now the model takes date as input only, so that we can use the model to predict the future price.
+
+`Apple Training Model`:
+
+| Model                     | Score              |
+| ------------------------- | ------------------ |
+| SVR                       | 0.9144209675551294 |
+| RandomForestRegressor     | 0.9997331050660618 |
+| AdaBoostRegressor         | 0.9998237811047961 |
+| GradientBoostingRegressor | 0.9991219486655357 |
+| LinearRegression          | 0.6381134088091925 |
+| DecisionTreeRegressor     | 0.999521941588286  |
+| KNeighborsRegressor       | 0.9998237811047961 |
+
+The best model is : AdaBoostRegressor
+
+
+
+`Microsoft Training Model`:
+
+| Model                     | Score              |
+| ------------------------- | ------------------ |
+| SVR                       | 0.886046846266471  |
+| RandomForestRegressor     | 0.9998639986573902 |
+| AdaBoostRegressor         | 0.9998848066914476 |
+| GradientBoostingRegressor | 0.9997137079984763 |
+| LinearRegression          | 0.6224787693482164 |
+| DecisionTreeRegressor     | 0.9997133475396855 |
+| KNeighborsRegressor       | 0.9998848066914476 |
+
+The best model is also : AdaBoostRegressor
+
+
+
+Let's use the model to predict new data. Than use the new data to train the model. 
+
+-> Keeping iterating this option until we get the result we want !
+

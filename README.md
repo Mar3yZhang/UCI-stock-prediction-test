@@ -251,25 +251,37 @@ The best model is also : AdaBoostRegressor
 
 Let's use the model to predict new data. Than use the new data to train the model. 
 
--> Keeping iterating this option until we get the result we want !
+-> Keeping iterating this operation until we get the results we want !
 
 ## 8. Compare two stock based on the prediction
 
    We use the model to predict the next 15 days adjusted close, then plot them and their return ratio.
 
-   Because in the original data, Microsoft has higher price than Aaple, the price of Microsoft is still higher than Apple in our prediction. 
+   Because in the original data, Microsoft has higher price than Apple, the price of Microsoft is still higher than Apple in our prediction. 
 
-   On the one hand, the chart shows that sometime Apple will have higher rate of return then Microsoft. On the other hand, Apple has more fluctuation than Microsoft.
+   On the one hand, the chart shows that sometimes Apple will have a higher rate of return than Microsoft. On the other hand, Apple has more fluctuation than Microsoft.
+
+
 
 ![1](README.assets/pred_apple.png)
+
+
+
 ![2](README.assets/pred_ms.png)
+
+
+
 ![3](README.assets/pred_adj.png)
+
+
+
 ![4](README.assets/pred_ror.png)
 
 ## 9. Summary
-  First, we preprocess the dataset by remove 2020 data. Then we visualize basic infomation of the two stock. Finally we use AdaBoostRegressor model to predict the adjusted close price for next 15 days.
+  First, we preprocess the dataset by removing 2020 data. Then we visualize basic infomation of the two stocks. Finally we use AdaBoostRegressor model to predict the adjusted close price for next 15 days.
 
   -> `Overall, we choose Microsoft because it has higher price and more stability.`
 
-  Since we only use date as the variable to build this simple model and the stock markert is complex, the prediction is inaccuracy and rough. This model can be improved if we involved other data such as stock dividend or market capitalization.
- 
+  Since we only use date as the variable to build this simple model and the stock markert is complex, the prediction is inaccurate and rough. This model can be improved if we involved other data such as stock dividend or market capitalization.
+
+​	Thank you for your reading !

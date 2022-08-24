@@ -1,4 +1,6 @@
-# This is the project for summer course from UC Irvine
+# This is the project for summer course from UC Irvine:smiley:
+
+This project is to use regression model to predict the stock trend of Microsoft company and Apple company in 15 days since 2022.8.1
 
 # # :book:Report for the final-project ：
 

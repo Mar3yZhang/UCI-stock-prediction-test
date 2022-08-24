@@ -1,3 +1,5 @@
+# This is the project for summer course from UC Irvine
+
 # # :book:Report for the final-project ：
 
 > + Course info ：I&C SCI_X426.85 (SUMMER 2022/REG 00267/SEC 1)
@@ -11,9 +13,6 @@ Notice:
 
 + This PDF is only used to explain the operation.
 
-+ Here we have a dictionary
-
-  [toc]
 
 ## Task 0：Comprehend the features the csv file
 
@@ -81,13 +80,6 @@ And we choose to use the stock records of Apple corporation and Microsoft corpor
 
 + By calculating the moving average, the impacts of random, short-term fluctuations on the price of a stock over a specified time frame are `mitigated`.
 
-Here we use the SMA:
-$$
-SMA \ = \ \frac{A_1 +A_2+A_3+...+A_n}{n} \\\\
-\ A=Average \ in \ period 
-\\
-n=Number \ of \ time \  periods
-$$
 
 According to the plots,we can see that :
 
@@ -111,9 +103,6 @@ According to the plots,we can see that :
 + The dividends and effects of inflation are not taken into consideration in the simple rate of return calculation.
 
 The formula to calculate the rate of return (RoR) is:
-$$
-Rate\ of \ return \ = \ \frac{Current \ value−Initial \ value} {Initial \ value}\times{100} \\\\
-$$
 
 We can see that Apple stock dropped almost 20% in 2008, ` and Microsoft's return ratio is more stable than Apple. ` 
 
@@ -158,18 +147,6 @@ According to the heat map, some of the features are too related to be used in pr
 
 -> `As a result, we should develop some new features to feed the model.` 
 
-Some of the features are listed below.
-$$
-HL\_PCT \ = \ \frac{High−Low} {Close}\times{100} \\\\
-$$
-
-$$
-PCT\_change \ = \ \frac{Close−Open} {Open} \times{100}\\\\
-$$
-
-$$
-High\_Low \ = \ \frac{Hight−Low} {Low} \times{100}\\\\
-$$
 
 ### Step 2: Data Cleansing && Train_test_split
 
